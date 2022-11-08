@@ -16,4 +16,8 @@ describe("validatePassword test suites", () => {
     it("should return false given a password 8 char. or longer, without letter", () => {
         expect(validatePassword("01234567")).toBe(false);
     });
+
+    it("should return false given a password 8 char. or longer, without number", () => {
+        expect(validatePassword("azertyui")).toBe(false);
+    });
 });
