@@ -11,6 +11,8 @@ describe("validatePassword test suites", () => {
 
     it("should return true given a password 8 char. or longer, a letter and a number", () => {
         expect(validatePassword("0123456test")).toBe(true);
+        expect(validatePassword("0123456TEST")).toBe(true);
+        expect(validatePassword("0123456TEst")).toBe(true);
     });
 
     it("should return false given a password 8 char. or longer, without letter", () => {
