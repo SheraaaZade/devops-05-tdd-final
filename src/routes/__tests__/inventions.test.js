@@ -38,7 +38,7 @@ describe("inventions Routes Tests", () => {
         });
     });
 
-    it("should return inventions sorted asc", async () => {
+    it("should return inventions sorted desc", async () => {
         const response = await request(app).get("/inventions/sort/desc");
         expect(response.body.inventions).toEqual(inventionsMock);
     });

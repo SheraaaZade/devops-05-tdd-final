@@ -15,21 +15,21 @@ describe("validateCredentials Services Tests", () => {
     const errorPasswordTooLong = { error: "Password is too long." };
 
     it("should return error as credentials (username) are not provided", () => {
-        givenUser(undefined);
-        givenPassword(undefined);
+        givenUser();
+        givenPassword();
         whenValidateCredentials();
         thenResultIs(errorCredentialsMandatory);
     });
 
     it("should return error as credentials (password) are not provided", () => {
         givenUser("user");
-        givenPassword(undefined);
+        givenPassword();
         whenValidateCredentials();
         thenResultIs(errorCredentialsMandatory);
     });
 
     it("should return error as credentials (user) is an empty string", () => {
-        givenUser(undefined);
+        givenUser();
         givenPassword("  ");
         whenValidateCredentials();
         thenResultIs(errorCredentialsMandatory);

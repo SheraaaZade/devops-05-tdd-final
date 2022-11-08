@@ -14,15 +14,15 @@ describe("KeyToUpperCase Tests", () => {
     ];
 
     it("should failed as items and key are not provided", () => {
-        givenItems(undefined);
-        givenKey(undefined);
+        givenItems();
+        givenKey();
         whenkeyToUpperCase();
         thenResultIs(undefined);
     });
 
     it("should failed as key is not provided", () => {
         givenItems(itemsMock);
-        givenKey(undefined);
+        givenKey();
         whenkeyToUpperCase();
         thenResultIs(undefined);
     });

@@ -20,8 +20,8 @@ describe("Signin Services Tests", () => {
     });
 
     it("should failed as credentials are not provided ", () => {
-        givenUsername(undefined);
-        givenPassword(undefined);
+        givenUsername();
+        givenPassword();
         whenSignin();
         thenResultIs({ error: "Empty credentials" });
     });

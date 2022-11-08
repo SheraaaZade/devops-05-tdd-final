@@ -15,8 +15,8 @@ describe("sortPerCreationDate Tests", () => {
     ];
 
     it("should failed as items and sortType are not provided", () => {
-        givenItems(undefined);
-        givenSortType(undefined);
+        givenItems();
+        givenSortType();
         whenSortPerCreationDate();
         thenResultIs(undefined);
     });

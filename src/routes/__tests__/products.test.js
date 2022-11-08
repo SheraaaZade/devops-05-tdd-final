@@ -25,7 +25,7 @@ describe("Products Routes Tests", () => {
         expect(fetch).toHaveBeenCalledWith("https://dummyjson.com/products");
     });
 
-    it("should respond with body products for products with id", async () => {
+    it("should respond with body products for product id", async () => {
         // Arrange
         fetch.mockResolvedValueOnce(
             Promise.resolve(new Response(JSON.stringify(products)))
